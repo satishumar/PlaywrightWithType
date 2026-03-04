@@ -1,0 +1,27 @@
+{
+  "name": "automation-task_playwright",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "allure:report": "allure generate allure-results --clean -o allure-report",
+    "allure:open": "allure open allure-report",
+    "test:allure": "playwright test && npm run allure:report && npm run allure:open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.0.10",
+    "allure-commandline": "^2.37.0",
+    "allure-playwright": "^3.5.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3"
+  }
+}
